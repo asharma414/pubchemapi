@@ -12,7 +12,7 @@ class Search extends Component {
          this.onChange = this.onChange.bind(this);
     }
 
-    componentWillMount() {
+    UNSAFE_componentWillMount() {
         this.props.search();
     }
 
