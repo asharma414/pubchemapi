@@ -1,12 +1,8 @@
-import { SEARCH_CHEM_IMAGE, SEARCH_CHEM_WIDGET } from './types';
+import { SEARCH } from './types';
 
 export const search = (searchData) => dispatch => {
     dispatch({
-        type: SEARCH_CHEM_IMAGE,
+        type: SEARCH,
         payload: searchData
-    });
-    dispatch({
-        type: SEARCH_CHEM_WIDGET,
-        payload: searchData
-    })
+});
 }

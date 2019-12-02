@@ -1,4 +1,4 @@
-import { SEARCH_CHEM_IMAGE, SEARCH_CHEM_WIDGET }from '../actions/types';
+import { SEARCH } from '../actions/types';
 
 const initialState = {
     imageHead: 'https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/name/',
@@ -10,11 +10,10 @@ const initialState = {
 
 export default function(state = initialState, action) {
     switch(action.type) {
-        case SEARCH_CHEM_IMAGE:
-        case SEARCH_CHEM_WIDGET:
+       case SEARCH:
             return {
                 ...state,
-                imageTerm: action.payload
+                term: action.payload
             };
         default:
             return state;
