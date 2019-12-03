@@ -8,19 +8,13 @@ class Search extends Component {
         this.state = {
             term: ''
          };
-         this.onSubmit = this.onSubmit.bind(this);
-         this.onChange = this.onChange.bind(this);
     }
-
-    UNSAFE_componentWillMount() {
-        this.props.search();
-    }
-
-    onChange(e) {
+    
+    onChange = (e) => {
         this.setState({[e.target.name]: e.target.value});
     }
 
-    onSubmit(e) {
+    onSubmit = (e) => {
         e.preventDefault();
         this.props.search(this.state.term)
     }
