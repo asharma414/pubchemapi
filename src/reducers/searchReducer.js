@@ -5,7 +5,7 @@ const initialState = {
     imageTail: '/PNG',
     widgetHead: 'https://pubchem.ncbi.nlm.nih.gov/compound/',
     widgetTail: '#section=IUPAC-Name&embed=true',
-    term: 'glucose'
+    term: 'glucose',
 }
 
 export default function(state = initialState, action) {
